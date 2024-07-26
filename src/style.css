@@ -1,0 +1,119 @@
+
+html {
+  --s: 80px;
+  /* control the size*/
+  --c1: #d995c6;
+  --c2: #915abf;
+
+  --_s: calc(2*var(--s)) calc(2*var(--s));
+  --_g: 35.36% 35.36% at;
+  --_c: #0000 66%, var(--c2) 68% 70%, #0000 72%;
+  background:
+    radial-gradient(var(--_g) 100% 25%, var(--_c)) var(--s) var(--s)/var(--_s),
+    radial-gradient(var(--_g) 0 75%, var(--_c)) var(--s) var(--s)/var(--_s),
+    radial-gradient(var(--_g) 100% 25%, var(--_c)) 0 0/var(--_s),
+    radial-gradient(var(--_g) 0 75%, var(--_c)) 0 0/var(--_s),
+    repeating-conic-gradient(var(--c1) 0 25%, #0000 0 50%) 0 0/var(--_s),
+    radial-gradient(var(--_c)) 0 calc(var(--s)/2)/var(--s) var(--s) var(--c1);
+}
+
+h1 {
+  color: #915abf;
+  font-size: 50px;
+  margin: 0;
+  padding: 0 auto;
+  text-align: center;
+  font-family: "Arial Black", Gadget, sans-serif;
+  letter-spacing: -0.2px;
+  word-spacing: -1.4px;
+  font-weight: 700;
+  font-variant: small-caps;
+  }
+
+h2 {
+  margin: 0;
+  text-align: center;
+  font-size: 30px;
+  font-family: "Arial Black", Gadget, sans-serif;
+  letter-spacing: -0.2px;
+  word-spacing: -1.4px;
+  color: #000000;
+  font-weight: 400;
+  font-variant: small-caps;
+  }
+
+h3 {
+  font-size: 25px;
+  margin: 15px;
+  padding: 0px;
+}
+
+footer {
+  background-color: #915abf;
+  font-family: "Arial Black", Gadget, sans-serif;
+  font-size: 14px;
+  letter-spacing: -0.2px;
+  word-spacing: -1.4px;
+  color: black;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+}
+
+select {
+  display: block;
+  width: 100%;
+  margin: 20px 0px 5px;
+  padding: 8px 24px 8px 10px;
+  font-size: 1rem;
+  background-color: transparent;
+  border-radius: 4px;
+}
+
+.container {
+  font-family: "Arial Black", Gadget, sans-serif;
+  font-size: 18px;
+  letter-spacing: -0.2px;
+  word-spacing: -1.4px;
+  color: #000000;
+  font-weight: 400;
+  max-width: 500px;
+  background-color: rgb(246, 223, 237);
+  border-radius: 10px;
+  margin: 20px auto;
+  padding: 25px;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.city {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  margin: 5px 5px;
+  border-bottom: 1px dashed black;
+  padding: 5px 0;
+}
+
+.city:last-child {
+  border: none;
+}
+
+.date {
+  opacity: 0.7;
+  margin: 0 15px;
+  font-size: 14px;
+}
+
+.time {
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 15px;
+}
+

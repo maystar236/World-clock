@@ -11,12 +11,14 @@
 
 
   </head>
+  <div class="container">
     <body>
-      <h1>
+      <h1>World Clock</h1>
+      <h2>
         <div id="hello">
           Welcome!
         </div>
-      </h1>
+      </h2>
 
     <p>
       <div id="local">
@@ -30,34 +32,56 @@
         <option value="Australia/Brisbane">Brisbane</option>
         <option value="Asia/Singapore">Singapore</option>
         <option value="America/New_York">New York</option>
-        <option value="Europe/Paris">Paris</option>
+        <option value="Europe/Madrid">Madrid</option>
     </select>
 
-    <p><div id="cityTime"></div></p>
+    <div class="city">
+      <div>
+      <h3>London</h3>
+      <div class="date">August 15th 2023</div>
+      </div>
+      <div class="time">8:00:40 AM</div>
+    </div>
 
-    <script>
-      function greeting() {
-          let greeting = document.querySelector("#hello");
-          greeting.innerHTML = "Hi, G'day, Ni hao, Hey, Bonjour";
-        }
-        setTimeout(greeting, 2000);
+    <div class="city">
+      <div>
+      <h3>Brisbane</h3>
+      <div class="date">August 15th 2023</div>
+      </div>
+      <div class="time">8:00:40 AM</div>
+    </div>
 
-        let localTime = moment.tz.guess();
-        let localElement = document.querySelector("#local");
-        localElement.innerHTML = `Your current time zone is ${localTime} and the current time is ${moment().format("h:m A")}`;
+    <div class="city">
+      <div>
+        <h3>Singapore</h3>
+        <div class="date">August 15th 2023</div>
+      </div>
+      <div class="time">8:00:40 AM</div>
+    </div>
 
-        function showSelectedCity(event) {
-          if (event.target.value.length > 0) {
-            let currentTime = moment().tz(event.target.value).format("dddd, MMMM D, YYYY h:m A");
+    <div class="city">
+      <div>
+        <h3>New York</h3>
+        <div class="date">August 15th 2023</div>
+      </div>
+      <div class="time">8:00:40 AM</div>
+    </div>
 
-          alert(`It is ${currentTime} in ${event.target.value}`);             
-          }
-        }
-        
-        let selectElement = document.querySelector("#cities");
-        selectElement.addEventListener('change', showSelectedCity); 
+    <div class="city">
+      <div>
+        <h3>Madrid</h3>
+        <div class="date">August 15th 2023</div>
+      </div>
+      <div class="time">8:00:40 AM</div>
+    </div>
 
-    </script>
+  </div>
+    <footer>
+      This project was coded by Kirsty Halkett and is <a href="https://github.com/maystar236/World-clock" target="_blank">
+      open sourced on GitHub.
+    </footer>
+
+    <script src="src/index.js"></script>
 
     </body>
   </html>
