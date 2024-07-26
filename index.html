@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.45/moment-timezone-with-data-1970-2030.js"></script>
+
+      <link rel="stylesheet" href="src/style.css" />
+      <title>World Clock</title>
+
+
+  </head>
+    <body>
+      <h1>
+        <div id="hello">
+          Welcome!
+        </div>
+      </h1>
+
+    <p>
+      <div id="local">
+      </div>
+    </p>
+
+    <label for="time">Select a city to view the current time</label>
+    <select id="cities">
+        <option value="">Select</option>
+        <option value="Europe/London">London</option>
+        <option value="Australia/Brisbane">Brisbane</option>
+        <option value="Asia/Singapore">Singapore</option>
+        <option value="America/New_York">New York</option>
+        <option value="Europe/Paris">Paris</option>
+    </select>
+
+    <p><div id="cityTime"></div></p>
+
+    <script>
+      function greeting() {
+          let greeting = document.querySelector("#hello");
+          greeting.innerHTML = "Hi, G'day, Ni hao, Hey, Bonjour";
+        }
+        setTimeout(greeting, 2000);
+
+        let localTime = moment.tz.guess();
+        let localElement = document.querySelector("#local");
+        localElement.innerHTML = `Your current time zone is ${localTime} and the current time is ${moment().format("h:m A")}`;
+
+        function showSelectedCity(event) {
+          if (event.target.value.length > 0) {
+            let currentTime = moment().tz(event.target.value).format("dddd, MMMM D, YYYY h:m A");
+
+          alert(`It is ${currentTime} in ${event.target.value}`);             
+          }
+        }
+        
+        let selectElement = document.querySelector("#cities");
+        selectElement.addEventListener('change', showSelectedCity); 
+
+    </script>
+
+    </body>
+  </html>
