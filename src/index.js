@@ -56,7 +56,7 @@ function showSelectedCity(event) {
       <div class="date">${cityTime.format("dddd, MMMM D, YYYY")}</div>
     </div>
       <div class="time">${cityTime.format("h:mm A")}</div>
-    </div>
+    </div><br>
         <a href="index.html">Return to home screen</a>`;
 };
 

@@ -74,6 +74,10 @@ select {
   border-radius: 4px;
 }
 
+a:link, a:visited {
+  text-decoration: none;
+}
+
 .container {
   font-family: "Arial Black", Gadget, sans-serif;
   font-size: 18px;
