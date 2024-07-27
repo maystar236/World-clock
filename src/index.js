@@ -35,22 +35,6 @@ function updateTime() {
   let singaporeTime = moment().tz("Asia/Singapore");
   singaporeDateElement.innerHTML = singaporeTime.format("dddd, MMMM D, YYYY");
   singaporeTimeElement.innerHTML = singaporeTime.format("h:mm A");
-
-  //new-york time 
-  let newYorkElement = document.querySelector("#new-york");
-  let newYorkDateElement = newYorkElement.querySelector(".date");
-  let newYorkTimeElement = newYorkElement.querySelector(".time");
-  let newYorkTime = moment().tz("America/New_York");
-  newYorkDateElement.innerHTML = newYorkTime.format("dddd, MMMM D, YYYY");
-  newYorkTimeElement.innerHTML = newYorkTime.format("h:mm A");
-
-  //madrid time 
-  let madridElement = document.querySelector("#madrid");
-  let madridDateElement = madridElement.querySelector(".date");
-  let madridTimeElement = madridElement.querySelector(".time");
-  let madridTime = moment().tz("Europe/Madrid");
-  madridDateElement.innerHTML = madridTime.format("dddd, MMMM D, YYYY");
-  madridTimeElement.innerHTML = madridTime.format("h:mm A"); 
 };
 
 updateTime();
@@ -73,7 +57,7 @@ function showSelectedCity(event) {
     </div>
       <div class="time">${cityTime.format("h:mm A")}</div>
     </div>
-        <a href="index.html">All cities</a>`;
+        <a href="index.html">Return to home screen</a>`;
 };
 
 let citySelectElement = document.querySelector("#cities");
