@@ -1,4 +1,4 @@
-setInterval(function(){
+//setInterval(function(){
 
 //greeting text
 function greeting() {
@@ -7,9 +7,11 @@ function greeting() {
   setTimeout(greeting, 2500);
 
 //welcome message
+setInterval(function(){
   let localTime = moment.tz.guess();
   let localElement = document.querySelector("#local");
   localElement.innerHTML = `Your current time zone is ${localTime}. <br> It is ${moment().format("dddd, MMMM D, YYYY")} and the time is ${moment().format("h:mm:ss A")}`;
+}), 1000;
 
 //function showSelectedCity(event) {
   //if (event.target.value.length > 0) {
@@ -18,6 +20,7 @@ function greeting() {
   //let selectElement = document.querySelector("#cities");
   //selectElement.addEventListener('change', showSelectedCity); 
 
+function updateTime() {  
 //london time 
   let londonElement = document.querySelector("#london");
   let londonDateElement = londonElement.querySelector(".date");
@@ -25,7 +28,6 @@ function greeting() {
   let londonTime = moment().tz("Europe/London");
   londonDateElement.innerHTML = londonTime.format("dddd, MMMM D, YYYY");
   londonTimeElement.innerHTML = londonTime.format("h:mm A");
-
 
   //brisbane time 
   let brisbaneElement = document.querySelector("#brisbane");
@@ -59,8 +61,9 @@ function greeting() {
   let madridTime = moment().tz("Europe/Madrid");
   madridDateElement.innerHTML = madridTime.format("dddd, MMMM D, YYYY");
   madridTimeElement.innerHTML = madridTime.format("h:mm A"); 
-
-  }, 1000);
+};
+updateTime();
+setInterval(updateTime, 1000);
 
 //function showSelectedCity(event) {
   //if (event.target.value.length > 0) {
