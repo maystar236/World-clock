@@ -81,7 +81,7 @@ select {
   word-spacing: -1.4px;
   color: #000000;
   font-weight: 400;
-  max-width: 500px;
+  max-width: 600px;
   background-color: rgb(246, 223, 237);
   border-radius: 10px;
   margin: 20px auto;
@@ -115,5 +115,6 @@ select {
   display: flex;
   justify-content: space-between;
   margin: 15px 15px;
+  color: rgb(67, 7, 116);
 }
 
